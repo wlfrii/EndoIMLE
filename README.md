@@ -2,9 +2,20 @@
 
 This is a class named 'Endoscopic Image Luminance Enhancement', aimed at improving the uniformity and luminance of endoscopic images.
 
+<table>
+    <tr><th> Original Image </th> <th> Enhanced Image </th>
+    </tr>
+    <tr><td> <img src="./test_data/test_01.bmp"> </td>
+    <td> <img src="./test_data/test_01_enhanced.bmp"> </td>
+    </tr>
+    <tr><td> <img src="./test_data/test_02.bmp"> </td>
+    <td> <img src="./test_data/test_02_enhanced.bmp"> </td>
+    </tr>
+</table>
+
 ## Instruction
 
-A demo script is provided, seeing `demo.m`. Several images provided in `./test_data` folder to test the codes.
+A demo script is provided, seeing [demo.m](https://github.com/wlfrii/EndoIMLE/blob/main/demo.m). Several images provided in [test_data](https://github.com/wlfrii/EndoIMLE/tree/main/test_data) folder to test the codes.
 
 The construtor requires six parameters, as follows
 ```MATLAB
@@ -51,9 +62,9 @@ For the other two functions `enhanceLeftImage()` and `enhanceRightImage()`, the 
 
 If no input argument specified, `k1` and `k2` will be determined based on the input image, and other parameters will be displaced by default property as follows.
 ```MATLAB
-L_ref = 0.5207
-s_ref = 0.6
-guided_epsilon = 0.0035
-guass_sigma = 5
-guass_r = 3
+L_ref = 0.5207;
+s_ref = 0.6;
+guided_epsilon = 0.0035;
+guass_sigma = 5;
+guass_r = 3;
 ```
