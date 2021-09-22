@@ -36,28 +36,20 @@ ts = 7;
 
 The public interfaces included in this class are as follows.
 ```MATLAB
-1. [] = reset(varargin)
-2. [imout] = enhanceLeftImage(imin, varargin)
-3. [imout] = enhanceRighttImage(imin, varargin)
-```
-For the first function `reset()`, the optional arguments are same as the reguired parameters in Constructor. And these parameters could be optionally set as follows.
-```MATLAB
-obj = EndoIMLE(...);
-...
-obj.reset('height', 720, 'width', 1280);
-obj.reset('distance', 100);
-...
+1. [imout] = enhanceLeftImage(imin, varargin)
+2. [imout] = enhanceRighttImage(imin, varargin)
+3. [] = reset(varargin)
 ```
 
-For the other two functions `enhanceLeftImage()` and `enhanceRightImage()`, the optional arguments are as follows. One who perfers to know the details of these parameters are suggest to read the artical.
+For the first two functions `enhanceLeftImage()` and `enhanceRightImage()`, the optional arguments are as follows. One who perfers to know the details of these parameters are suggest to read the artical.
 ```MATLAB
-% L_ref
-% s_ref
-% k1
-% k2
-% guided_epsilon
-% guass_sigma
-% guass_r
+% L_ref             The reference luminance
+% s_ref             The reference saturation
+% k1                The enhancement parameters
+% k2                The enhancement parameters
+% guided_epsilon    The epsilon for fast guided filter
+% guass_sigma       The sigma for Gaussian filter
+% guass_r           The radius for Gaussian filter
 ```
 
 If no input argument specified, `k1` and `k2` will be determined based on the input image, and other parameters will be displaced by default property as follows.
@@ -68,3 +60,17 @@ guided_epsilon = 0.0035;
 guass_sigma = 5;
 guass_r = 3;
 ```
+
+For the last function `reset()`, the optional arguments include all the parameters mentioned above, which are the parameters required in the Constructor and the optionaly parameter in enhance method, __except for__  `k1` and `k2`. The parameters `k1` and `k2` must be specified in the method function if needed.
+
+These parameters could be optionally reset by follows.
+```MATLAB
+obj = EndoIMLE(...);
+...
+obj.reset('height', 720, 'width', 1280);
+obj.reset('distance', 100);
+...
+obj.reset('s_ref', 0.5);
+...
+```
+
