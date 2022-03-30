@@ -1,5 +1,9 @@
 # EndoIMLE
 
+>__Cite the artical__: Wang L, Wu B, Wang X, Zhu Q, Xu K. Endoscopic image luminance enhancement based on the inverse square law for illuminance and retinex. *Int J Med Robot*. 2022;e2396. https://doi.org/10.1002/rcs.2396
+
+---
+
 This is a class named 'Endoscopic Image Luminance Enhancement', aimed at improving the uniformity and luminance of endoscopic images.
 
 <table>
