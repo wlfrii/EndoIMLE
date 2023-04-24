@@ -14,6 +14,8 @@ This is a class named 'Endoscopic Image Luminance Enhancement', aimed at improvi
     </tr>
     <tr><td> <img src="./test_data/test_02.bmp"> </td>
     <td> <img src="./test_data/test_02_enhanced.bmp"> </td>
+    <tr> <th colspan=2> Comparison </th> </tr>
+    <tr> <td colspan=2> <img src="./test_data/comparison.jpg"> </td> </tr>
     </tr>
 </table>
 
